@@ -7,7 +7,7 @@ html {
   --task_margin: 5px;
   --task_height: 10vh;
   --todo_height: calc(75vh + 60px);
-  --survey_display: block;
+  --survey_display: flex;
 }
 
 #topbar {
@@ -245,6 +245,10 @@ html {
   position: absolute;
   display: var(--survey_display);
   margin-top: calc(32.5vh + 20px);
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  width: 15vh;
 }
 
 #try_image {
