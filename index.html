@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="smonitor_css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header">My Dashboard</div>
+  <div id="topbar">
+    <div id="gem_count" class="monitors" style="display: inline-block; margin: auto; text-align: center;">0</div>
+    <div id="mood_count" class="monitors" style="display: inline-block; margin: auto; text-align: center;">0</div>
+    <div id="engagement_count" class="monitors" style="display: inline-block; margin: auto; text-align: center;">0</div>
+
+  </div>
+  <div id="todo">
+    <div id="add" class="medium_button" onclick="add_task()">ADD</div>
+  </div>
+  <div id="survey" class="widgets">Survey - Mood + Engagement<div class="slider_container"><input type="range" min="0"
+        max="10" value="5" class="slider" id="Engagement"></input>
+      <div id="Engagement_val" class="outputs">0</div>
+    </div>
+    <div class="slider_container"><input type="range" min="0" max="10" value="5" class="slider" id="Mood"></input>
+      <div id="Mood_val" class="outputs">0</div>
+    </div>
+    <div class="medium_button" id="save_survey" onclick="save_survey()">SAVE</div>
+  </div>
+  <div id="try" class="widgets">
+    <div class="widget_title">Try This</div><a href="" target=”_blank” id="try_link"><img id="try_image"
+        src="https://assets.bitdegree.org/online-learning-platforms/storage/media/codecademy-5f60af13ae6d0.o.png"></img></a>
+  </div>
+  <div id="widget3" class="widgets">
+    <div id="add_widget" class="medium_button" onclick="toggleWidget(this)">ADD</div>
+  </div>
+  <div id="widget4" class="widgets">
+    <div id="add_widget" class="medium_button" onclick="toggleWidget(this)">ADD</div>
+  </div>
+  <div id="widget5" class="widgets">
+    <div id="add_widget" class="medium_button" onclick="toggleWidget(this)">ADD</div>
+  </div>
+  <div id="widget6" class="widgets">
+    <div id="add_widget" class="medium_button" onclick="toggleWidget(this)">ADD</div>
+  </div>
+  <table id="try_table" style="display: none;">
+    <tr>
+      <td>https://typing.com</td>
+      <td>
+        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO3xH6UKCfkqfsa_j79T1c2UpTDVyg_WlikSXFk72Y6oHkXBMjI7J6IZZbV3oiM-WMQ-k&usqp=CAU
+      </td>
+    </tr>
+    <tr>
+      <td>https://chess.com</td>
+      <td>
+        https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZqzBs39OkZlc6d9dpm3P3CBWJSzwpJ_DqsQMlVtgFHx-tZ8xSumEMCK43F0Rb69fv83U&usqp=CAU
+      </td>
+    </tr>
+    <tr>
+      <td>https://kahoot.com/academy/study/</td>
+      <td>https://play-lh.googleusercontent.com/AyJnaQ0JfEu-F_4bop5hH4qpJwYJ1blePyer6VVUUm4Al80uWJBje4UZHirrf39wI7uI
+      </td>
+    </tr>
+    <tr>
+      <td>https://codecademy.com</td>
+      <td>https://assets.bitdegree.org/online-learning-platforms/storage/media/codecademy-5f60af13ae6d0.o.png</td>
+    </tr>
+  </table>
+  <script src="smonitor_js.js"></script>
+</body>
+
+</html>
