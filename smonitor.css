@@ -1,0 +1,261 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --task_margin: 5px;
+  --task_height: 10vh;
+  --todo_height: calc(75vh + 60px);
+  --survey_display: block;
+}
+
+#topbar {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  background-color: maroon;
+  top: 0px;
+  left: 0px;
+}
+
+#header {
+  position: relative;
+  margin-top: calc(8vh + 5px);
+  height: 6vh;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0;
+}
+
+.medium_button {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 15vh;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  border-width: 5px;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+#todo {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 33.33vw;
+  height: var(--todo_height);
+  border-radius: 3px;
+  background-color: rgb(237, 237, 237);
+}
+
+.task {
+  position: relative;
+  margin-left: var(--task_margin);
+  margin-top: -5px;
+  width: calc(33.33vw - 10px);
+  height: var(--task_height);
+  border-radius: 3px;
+  background-color: lightgray;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+.textbox {
+  border: none;
+  width: calc(33.33vw - 50px);
+  height: 25px;
+  margin-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+.add_textbox {
+  margin-bottom: 50%;
+  width: 80%;
+}
+
+.monitors {
+  position: relative;
+  text-align: center;
+  height: 5vh;
+  width: 15vh;
+  border-radius: 3px;
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.widgets {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  width: 20vw;
+  height: calc(37.5vh + 25px);
+  background-color: rgb(237, 237, 237);
+  border-radius: 3px;
+}
+
+#survey {
+  left: calc(33.33vw + 15px);
+}
+
+#try {
+  left: calc(53.33vw + 20px);
+}
+
+#widget3 {
+  left: calc(73.33vw + 25px);
+}
+
+#widget4 {
+  left: calc(33.33vw + 15px);
+  top: calc(51.5vh + 35px);
+}
+
+#widget5 {
+  left: calc(53.33vw + 20px);
+  top: calc(51.5vh + 35px);
+}
+
+#widget6 {
+  left: calc(73.33vw + 25px);
+  top: calc(51.5vh + 35px);
+}
+
+.outputs {
+  position: absolute;
+  display: var(--survey_display);
+  margin-left: 43%;
+}
+
+.slider {
+  position: absolute;
+  display: var(--survey_display);
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5vh;
+  background: #f2faf9;
+  outline: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  margin-left: calc(-50% + 5px);
+  margin-top: 0;
+  transition: .5s;
+  width: calc(100% - 30px);
+}
+
+#Engagement {
+  margin-top: 55%;
+}
+
+#Engagement_val {
+  margin-top: 55%;
+}
+
+#Mood {
+  margin-top: 10%;
+}
+
+#Mood_val {
+  margin-top: 10%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 5vh;
+  height: 5vh;
+  background: maroon;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 3px;
+  top: 5px;
+}
+
+.slider::-moz-range-thumb {
+  width: 5vh;
+  height: 5vh;
+  background: maroon;
+  cursor: pointer;
+  top: 5px;
+}
+
+#save_survey {
+  position: absolute;
+  display: var(--survey_display);
+  margin-top: calc(32.5vh + 20px);
+}
+
+#try_image {
+  width: 15vw;
+  height: auto;
+  border-radius: 3px;
+  object-fit: contain;
+  margin: auto;
+}
+
+#try_link {
+  object-fit: contain;
+  margin: auto;
+}
